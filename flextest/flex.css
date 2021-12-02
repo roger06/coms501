@@ -1,5 +1,12 @@
-body {
+/* 
+based on
+https://webdesign.tutsplus.com/tutorials/how-to-build-a-responsive-navigation-bar-with-flexbox--cms-33535
 
+*/
+body {
+    
+    font-family: sans-serif;
+    font-size: 16px;
     background: white;
 }
 
@@ -8,10 +15,7 @@ body {
     display: flex;
     width: 80%;
     margin: 0 auto;
-
-    border: 1px solid wheat;
-
-
+    /* border: 1px solid wheat; */
     align-items: center;
 }
 
@@ -27,11 +31,7 @@ body {
     margin: 0;
 }
 
-body {
-    font-family: sans-serif;
-    font-size: 16px;
-}
-
+/* nav */
 nav {
     background: #222;
     padding: 0 15px;
@@ -91,8 +91,6 @@ a {
 
     order: 1;
     font-size: 20px;
-
-
 }
 
 .item.button {
@@ -111,11 +109,11 @@ a {
 
     #container {
         width: 99%;
+        border: none;
     }
     body {
 
         background: darkgrey;
-        border: none;
     }
     nav {
 
@@ -125,5 +123,44 @@ a {
         order: 3;
         padding: 10px;
         width: 100%;
+        display: none;
+    }
+
+    .active .item {
+        display: block;
+    }
+
+    .button.secondary {
+        border-bottom: 1px #444 solid;
+    }
+
+    .submenu {
+        display: none;
+    }
+
+    .submenu-active .submenu {
+        display: block;
+    }
+
+    .has-submenu > a::after {
+
+        font-family: "Font Awesome 5 Free";
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 900;
+        content: "\f078";    /* down-arrow  - in FA unicode */
+        color: white;
+        padding-left: 5px;
+    }
+
+    .submenu a {
+        padding: 10px 15px;
+    }
+
+    .submenu-active {
+
+        background: #111;
+        border-radius: 3px;
+
     }
 }
