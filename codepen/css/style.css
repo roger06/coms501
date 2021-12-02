@@ -175,7 +175,7 @@
     #BANNER
   \*------------------------------------*/
  .banner {
-   height: 100vh;
+   height: 75vh;
    width: 100%;
    position: relative;
    overflow: hidden;
@@ -420,7 +420,7 @@
  }
 
  .brogress-bar {
-   background-color: var(--main-color);
+   background-color: yellow;
    height: 15px;
    text-align: right;
    padding-right: 10px;

@@ -1,0 +1,129 @@
+body {
+
+    background: white;
+}
+
+#container {
+
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+
+    border: 1px solid wheat;
+
+
+    align-items: center;
+}
+
+
+
+/* /*************** */
+
+
+/* Basic styling */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+nav {
+    background: #222;
+    padding: 0 15px;
+    height: 100%;
+    background-color: #222;
+    width: 100%;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu,
+.submenu {
+    list-style-type: none;
+}
+
+.logo {
+    font-size: 20px;
+    padding: 7.5px 10px 7.5px 0;
+}
+
+.item {}
+
+.item.button {
+    padding: 9px 5px;
+}
+
+.item:not(.button) a:hover,
+.item a:hover::after {
+    color: #ccc;
+}
+
+.menu {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu li a {
+
+    display: block;
+    padding: 15px 5px;
+}
+
+.menu li.subitem a {
+    padding: 15px;
+
+
+
+}
+
+.toggle {
+
+    order: 1;
+    font-size: 20px;
+
+
+}
+
+.item.button {
+
+    order: 2;
+
+}
+
+.item {
+    order: 3;
+    padding: 10px;
+
+}
+
+@media screen and (max-width: 768px) {
+
+    #container {
+        width: 99%;
+    }
+    body {
+
+        background: darkgrey;
+        border: none;
+    }
+    nav {
+
+        width: 150px;
+    }
+    .item {
+        order: 3;
+        padding: 10px;
+        width: 100%;
+    }
+}
