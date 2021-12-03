@@ -4,7 +4,7 @@ https://webdesign.tutsplus.com/tutorials/how-to-build-a-responsive-navigation-ba
 
 */
 body {
-    
+
     font-family: sans-serif;
     font-size: 16px;
     background: white;
@@ -55,7 +55,9 @@ a {
     padding: 7.5px 10px 7.5px 0;
 }
 
- 
+.item {
+    padding: 10px;
+}
 
 .item.button {
     padding: 9px 5px;
@@ -96,7 +98,8 @@ a {
 .item.button {
 
     order: 2;
-
+    text-align: center;
+    display: none;
 }
 
 .item {
@@ -105,7 +108,9 @@ a {
 
 }
 
-
+.active .item {
+    display: block;
+}
 
 
 .item.button {
@@ -113,6 +118,7 @@ a {
     order: 1;
     display: block;
 }
+
 .item {
     order: 3;
     padding: 10px;
@@ -124,7 +130,7 @@ a {
 
     background: #0080ff;
     border: 1px royalblue solid;
-    
+
 }
 
 .button.secondary {
@@ -138,6 +144,7 @@ a {
     border: 1px #0080ff solid;
 
 }
+
 .button a:hover {
     text-decoration: none;
 }
@@ -147,26 +154,27 @@ a {
     border-color: darkblue;
 }
 
-.has-submenu > a::after {
+.has-submenu>a::after {
 
     font-family: "Font Awesome 5 Free";
     font-size: 12px;
     line-height: 16px;
     font-weight: 900;
-    content: "\f078";    /* down-arrow  - in FA unicode */
+    content: "\f078";
+    /* down-arrow  - in FA unicode */
     color: white;
     padding-left: 5px;
 }
 
 /* desktop */
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 769px) {
 
-    body{
+    body {
 
         background-color: aquamarine;
     }
 
-    
+
 
     .item {
 
@@ -204,9 +212,9 @@ a {
 
 /* tablet */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px)  {
 
-    body{
+    body {
 
         background: navy;
     }
@@ -214,15 +222,25 @@ a {
     .menu {
 
         justify-content: center;
+
     }
 
     .logo {
         flex: 1;
     }
 
- 
-    
-    
+    /* Button up from tablet screen */
+    .menu li.button a {
+        padding: 10px 15px;
+        margin: 5px 0;
+    }
+
+    .item.button {
+        width: auto;
+        order: 1;
+        display: block;
+      }
+
     .toggle {
         flex: 1;
         text-align: right;
@@ -233,7 +251,7 @@ a {
 
         background: #0080ff;
         border: 1px royalblue solid;
-        
+
     }
 
     .button.secondary {
@@ -247,6 +265,7 @@ a {
         border: 1px #0080ff solid;
 
     }
+
     .button a:hover {
         text-decoration: none;
     }
@@ -255,7 +274,9 @@ a {
         background: royalblue;
         border-color: darkblue;
     }
-
+    .item {
+        text-align: center;
+     }
 
 
 }
@@ -267,14 +288,17 @@ a {
         width: 99%;
         border: none;
     }
+
     body {
 
         background: darkgrey;
     }
+
     nav {
 
         width: 100%;
     }
+
     .item {
         order: 3;
         padding: 10px;
@@ -298,13 +322,14 @@ a {
         display: block;
     }
 
-    .has-submenu > a::after {
+    .has-submenu>a::after {
 
         font-family: "Font Awesome 5 Free";
         font-size: 12px;
         line-height: 16px;
         font-weight: 900;
-        content: "\f078";    /* down-arrow  - in FA unicode */
+        content: "\f078";
+        /* down-arrow  - in FA unicode */
         color: white;
         padding-left: 5px;
     }
@@ -319,4 +344,43 @@ a {
         border-radius: 3px;
 
     }
+}
+
+/* smaller phone */
+
+/* more an academic exercise here to stop the 'log in' and 'sign' up
+showing as buttons where there's not room */
+@media screen and (max-width: 400px) {
+
+    body{
+
+        background-color: darkmagenta;
+    }
+
+    .item.button {
+        /* display: none; */
+        order: 2;
+      
+        
+    }
+
+    .menu li a {
+        
+        padding: 8px 5px;
+    }
+
+   
+    .toggle {
+
+        order: 1;
+    }
+
+    .logo {
+
+        /* display: none; */
+        font-size: 14px;
+    }
+
+
+
 }
