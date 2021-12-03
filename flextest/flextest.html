@@ -1,38 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-      <link rel="stylesheet" href="flex.css">
+    <link rel="stylesheet" href="flex.css">
     <title>Flexbox test</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
 </head>
+
 <body>
-    
-    <div id="container">
-        <nav>
-            <ul class="menu">
-                <li class="logo"><a href="#">DVD rental</a></li>
-                <li class="item"><a href="#">Home</a></li>
-                <li class="item"><a href="#">About</a></li>
-                <li class="item has-submenu">
-                    <a tabindex="0">Categories</a>
-                    <ul class="submenu">
-                        <li class="subitem"><a href="#">Action</a></li>
-                        <li class="subitem"><a href="#">Drama</a></li>
-                        <li class="subitem"><a href="#">Kids</a></li>
-                        <li class="subitem"><a href="#">Zombies</a></li>
-                    </ul>
-                </li>
+    <main>
+        <div id="container">
+            <nav>
+                <ul class="menu">
+                    <li class="logo"><a href="#">DVD rental</a></li>
+                    <li class="item"><a href="#">Home</a></li>
+                    <li class="item"><a href="#">About</a></li>
+                    <li class="item has-submenu">
+                        <a tabindex="0">Categories</a>
+                        <ul class="submenu">
+                            <li class="subitem"><a href="#">Action</a></li>
+                            <li class="subitem"><a href="#">Drama</a></li>
+                            <li class="subitem"><a href="#">Kids</a></li>
+                            <li class="subitem"><a href="#">Zombies</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="item button"><a href="#">Log In</a></li>
+                    <li class="item button secondary"><a href="#">Sign Up</a></li>
+                    <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+                </ul>
+            </nav>
+
+
+        </div>
+
+        <section>
+
+            <div id="left">
                 
-                
-                <li class="item button"><a href="#">Log In</a></li>
-                <li class="item button secondary"><a href="#">Sign Up</a></li>
-                <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
-            </ul>
-        </nav>
-        
-    </div>
-    <script src="script.js"></script>
-    
+                <h3>Left menu</h3>
+                <ul>
+                    <li><a href="#">One</a></li>
+                    <li><a href="#">Two</a></li>
+                    <li><a href="#">Three</a></li>
+                    <li><a href="#">Four</a></li>
+                    <li><a href="#">Five</a></li>
+                    
+                </ul>
+
+
+
+            </div>
+            <div id="main"> two </div>
+            <div id="right">three</div>
+        </section>
+
+
+        <footer>
+            <h3>Footer</h3>
+            
+            <address>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae sed tempore, voluptate unde
+                    similique, quo quisquam cum sequi aperiam quasi aut! Commodi, sunt.</p>
+            </address>
+
+        </footer>
+        <script src="script.js"></script>
+    </main>
 </body>
+
 </html>

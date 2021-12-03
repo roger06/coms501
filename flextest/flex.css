@@ -6,8 +6,9 @@ https://webdesign.tutsplus.com/tutorials/how-to-build-a-responsive-navigation-ba
 body {
 
     font-family: sans-serif;
-    font-size: 16px;
+    font-size: 100%;
     background: white;
+
 }
 
 #container {
@@ -212,7 +213,7 @@ a {
 
 /* tablet */
 
-@media screen and (max-width: 768px)  {
+@media screen and (max-width: 768px) {
 
     body {
 
@@ -239,7 +240,7 @@ a {
         width: auto;
         order: 1;
         display: block;
-      }
+    }
 
     .toggle {
         flex: 1;
@@ -274,9 +275,10 @@ a {
         background: royalblue;
         border-color: darkblue;
     }
+
     .item {
         text-align: center;
-     }
+    }
 
 
 }
@@ -285,10 +287,25 @@ a {
 @media screen and (max-width: 500px) {
 
     #container {
-        width: 99%;
+        width: 100%;
         border: none;
     }
 
+    main {
+
+        width: 100%;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+    
+    }
+    
+    #left {
+
+        display: none;
+    }
     body {
 
         background: darkgrey;
@@ -352,7 +369,7 @@ a {
 showing as buttons where there's not room */
 @media screen and (max-width: 400px) {
 
-    body{
+    body {
 
         background-color: darkmagenta;
     }
@@ -360,16 +377,16 @@ showing as buttons where there's not room */
     .item.button {
         /* display: none; */
         order: 2;
-      
-        
+
+
     }
 
     .menu li a {
-        
+
         padding: 8px 5px;
     }
 
-   
+
     .toggle {
 
         order: 1;
@@ -384,3 +401,87 @@ showing as buttons where there's not room */
 
 
 }
+
+
+
+
+
+/* non nav settings */
+
+section {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: lemonchiffon;
+    margin-top: 5px;
+
+}
+
+main{
+
+    width: 90%;
+    margin: 0 auto;
+}
+
+article {}
+
+section div {
+
+    border: 1px dotted #222;
+    height: 200px;
+    min-height: 80%;
+}
+
+#left {
+    flex: 1 ;
+    /* background-color: blue; */
+
+}
+
+/* three main cols */
+#main {
+
+    flex: 5;
+
+}
+
+#right {
+
+    flex: 2;
+}
+
+footer{
+
+    height: 100px;
+    margin-top: 5px;
+    display: flex;
+
+}
+
+/* links */
+
+#left ul {
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#left ul li  {
+
+    margin-left: 12px;
+     
+}
+
+
+#left ul li a {
+
+    color: blue;
+    font-size: 0.8em;
+}
+
+
+#left ul li a:hover {
+
+    text-decoration: underline;
+}
+
