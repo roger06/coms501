@@ -7,7 +7,7 @@ body {
 
     font-family: sans-serif;
     font-size: 100%;
-    background: white;
+    background: #f8f9fa;
 
 }
 
@@ -172,7 +172,7 @@ a {
 
     body {
 
-        background-color: aquamarine;
+        
     }
 
 
@@ -219,6 +219,12 @@ a {
 
         background: navy;
     }
+
+    #left {
+
+        display: none;
+    }
+
 
     .menu {
 
@@ -289,12 +295,15 @@ a {
     #container {
         width: 100%;
         border: none;
+        
     }
 
-    main {
+    #main {
 
         width: 100%;
     }
+
+    
 
     section {
         display: flex;
@@ -398,7 +407,15 @@ showing as buttons where there's not room */
         font-size: 14px;
     }
 
+    #left {
 
+        display: none;
+    }
+
+    main {
+        width: 100%;
+        padding: 0;
+    }
 
 }
 
@@ -411,7 +428,6 @@ showing as buttons where there's not room */
 section {
     display: flex;
     justify-content: space-evenly;
-    background-color: lemonchiffon;
     margin-top: 5px;
 
 }
@@ -422,39 +438,136 @@ main{
     margin: 0 auto;
 }
 
-article {}
+ 
 
 section div {
 
-    border: 1px dotted #222;
-    height: 200px;
+    /* border: 1px dotted #222; */
+    /* height: 200px; */
     min-height: 80%;
 }
 
 #left {
-    flex: 1 ;
+    flex: 1 0 10% ;
     /* background-color: blue; */
 
 }
 
 /* three main cols */
 #main {
-
-    flex: 5;
+    padding: 12px;
+    flex:6 0 70%;
+    border-left: 1px solid red;
+    
 
 }
 
 #right {
 
-    flex: 2;
+    padding: 5px;
+
+    flex: 1 2  15%;
+    border-left: 1px solid red;
 }
 
+
+
+main #dvdgrid {
+    background-color:#ccc;
+    margin-top: 17px;
+    padding: 10px;
+}
+
+main #dvdgrid ul {
+    
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    /* justify-content: space-evenly; */
+   
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+
+main #dvdgrid ul li {
+    
+    margin-left: 10px;
+    margin-bottom: 15px;
+    background: white;
+    
+}
+
+main #dvdgrid .items {
+    
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 4px;
+    flex: 1 1 25%;
+    display: flex;
+    
+    
+}
+
+main #dvdgrid ul li p {
+
+    margin-left: 10px;
+    font-size: 0.79em;
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-weight: 600;
+    color: dimgrey;
+
+}
+.fa-compact-disc {
+
+    color: #222;
+   
+}
+
+/* footer */
 footer{
 
     height: 100px;
-    margin-top: 5px;
+    margin-top: 10px;
+    padding-top: 13px;
     display: flex;
+    justify-items: flex-start;
+    border-top: 1px red dotted;
 
+}
+
+footer address {
+
+    padding: 3px;
+    /* flex: 1; */
+    /* border: blue 1px solid; */
+}
+
+footer div {
+/* flex: 1; */
+}
+
+#social {
+
+    /* border: red 1px solid; */
+    /* width: 200px; */
+    padding-top: 6px;
+    display: flex;
+    flex: 0 1 220px;
+    justify-items: flex-start;
+    justify-content: space-between;
+    margin-left: 11px;
+    
+}
+
+#social a{
+
+    color: navy;
+}
+#social a:hover{
+
+    color: blue;
 }
 
 /* links */
