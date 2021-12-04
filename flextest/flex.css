@@ -8,15 +8,17 @@ body {
     font-family: sans-serif;
     font-size: 100%;
     background: #f8f9fa;
+    
+}
+p{
+    font-family: 'Allerta Stencil', sans-serif;
 
 }
-
 #container {
 
-    display: flex;
+    /* display: flex; */
     width: 100%;
     margin: 0 auto;
-    /* border: 1px solid wheat; */
     align-items: center;
 }
 
@@ -34,10 +36,10 @@ body {
 
 /* nav */
 nav {
-    background: #222;
+    background: #553f29;
     padding: 0 15px;
     height: 100%;
-    background-color: #222;
+    
     width: 100%;
 }
 
@@ -129,9 +131,9 @@ a {
 
 .button a {
 
-    background: #0080ff;
-    border: 1px royalblue solid;
-
+    /* background: #0080ff; */
+    background: #222515;
+    
 }
 
 .button.secondary {
@@ -140,9 +142,9 @@ a {
 
 
 .button.secondary a {
-
+    
     background: transparent;
-    border: 1px #0080ff solid;
+    border: 1px #e1e8d7 solid;
 
 }
 
@@ -457,7 +459,7 @@ section div {
 #main {
     padding: 12px;
     flex:6 0 70%;
-    border-left: 1px solid red;
+    border-left: 1px solid #222515;
     
 
 }
@@ -467,13 +469,13 @@ section div {
     padding: 5px;
 
     flex: 1 2  15%;
-    border-left: 1px solid red;
+    border-left: 1px solid #222515;
 }
 
 
 
 main #dvdgrid {
-    background-color:#ccc;
+    background-color:#a79282;
     margin-top: 17px;
     padding: 10px;
 }
@@ -487,7 +489,8 @@ main #dvdgrid ul {
     /* justify-content: space-evenly; */
    
     flex-wrap: wrap;
-    align-items: flex-start;
+    /* align-items: flex-start;  */
+    /* having flex-start gives unequal col heights */
 }
 
 
@@ -506,6 +509,7 @@ main #dvdgrid .items {
     padding: 4px;
     flex: 1 1 25%;
     display: flex;
+    filter: drop-shadow(5px 5px 3px #222);
     
     
 }
@@ -533,7 +537,8 @@ footer{
     padding-top: 13px;
     display: flex;
     justify-items: flex-start;
-    border-top: 1px red dotted;
+    border-top: 1px #222515 dotted;
+
 
 }
 
@@ -577,18 +582,21 @@ footer div {
     margin: 0;
     padding: 0;
     list-style: none;
+    width: 90%;
 }
 
 #left ul li  {
 
     margin-left: 12px;
-     
+    border: 1px solid blue;
+    margin-bottom: 3px;
+    padding: 3px;
 }
 
 
 #left ul li a {
 
-    color: blue;
+    color: #560500;
     font-size: 0.8em;
 }
 
