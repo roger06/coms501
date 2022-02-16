@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flex : grow - shrink - basis</title>
+    <meta charset="UTF-8">
+
+    <style>
+        html,
+        body {
+            width: 80%;
+            margin: 0 auto;
+            padding: 2%;
+            line-height: 1.6;
+        }
+
+
+        .box {
+            border-radius: .3em;
+            box-sizing: border-box;
+            border: 4px solid #999;
+            padding: 20px;
+            background: #E6E3D4;
+
+
+        }
+
+        /* colours */
+
+        .flex1 {
+            background-color: aqua;
+        }
+
+        .flex-container {
+
+            margin: 1em 0;
+            border: 2px solid red;
+
+        }
+
+        /*FLEX */
+
+
+        .flex-container {
+
+
+            display: flex;
+
+            width: 800px;
+
+            /* wrap on the container will depend on the flex setting of the item(s) */
+            /* flex-wrap: wrap; */
+
+            /* no wrap will force items onto same line */
+            /* items will exceed the width of the container if shrink set to 0 */
+        }
+
+
+
+
+        /* flex grow / shrink / basis */
+        .flex1 {
+
+            flex: 1 0 250px;
+            /* with no wrap and skrink at 0 - items will extend beyond the container */
+
+            flex: 0 1 150px;
+            /* with no wrap and skrink at 1 - items will shrink to fit the container */
+
+            flex: 1 0 100px;
+            /* with no wrap and skrink at 1 - items will shrink to fit the container */
+
+
+
+
+
+
+            /* take this property out and box widths are just governed by the content.
+            so flex grow (first value) is a PROPORTION compared with other flex items.
+            */
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Flex : grow - shrink - basis</h1>
+    <P>body = 80% - flex container  = 800px</P>
+
+
+    <section class="flex-container">
+        
+
+        <div class="box flex1">
+            <h3>Flex 1</h3>
+            <p>spernatur repudiandae cumque pariatur beatae sunt provident tempore. Voluptas voluptate maxime amet illo
+                impedit reprehenderit sunt totam, consequuntur vel sed consectetur aliquid dolorum debitis? Non veniam
+                deserunt consequatur architecto aut vel voluptatum accusantium vero itaque.</p>
+        </div>
+
+
+        <div class="box flex1">
+            <h3>Flex 2</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt quod impedit minus quia consequuntur
+                consectetur iste delectus sed placeat nulla?</p>
+        </div>
+
+
+        <div class="box flex1">
+            <h3>Flex 3</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, cupiditate.</p>
+        </div>
+
+        <div class="box flex1">
+            <h3>Flex 4</h3>
+        </div>
+
+    </section>
+
+
+</body>
+
+</html>

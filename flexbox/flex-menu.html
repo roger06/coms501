@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Flex Menu</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <style>
+    html,
+body {
+	margin: 0;
+	padding: 0;
+}
+        .flex {
+
+            display: flex;
+            height: 200px;
+/*            width: 40%;*/
+            background-color: burlywood;
+            font-size: 2rem;
+            justify-content: center;  /*  doesn't work if display not 'flex'  */
+            align-items: center;
+            text-transform: uppercase;
+        }
+
+/*  just another class to add to the second flex div      */
+        .adjust {
+
+            background-color: darkred;
+            margin-top: 10px;
+            flex-wrap: wrap; /* other wise line / p breaks stay on same line  - flex-flow does direction and wrap */
+
+        }
+
+/*    menu    */
+
+/*        NO FLOATS REQUIRED!!!!!!!!!!!!!!!!!!   */
+
+        .menuwrap{
+            background-color: indigo;
+            font-family: sans-serif;
+            font-size: 1rem;
+            min-height: 2.75rem;
+            display: flex;
+            align-items:flex-start;
+            padding: 0 1rem;
+
+            flex-direction: column;  /* make vertical */
+/*            flex-direction: column-reverse;*/
+/*            flex-direction: row-reverse;*/ /* reverse */
+        }
+
+
+        @media (min-width: 500px){
+            body{
+
+                background-color: darkgrey;
+            }
+            .menuwrap{
+
+                flex-direction: row;
+                align-items: center;
+
+            }
+
+
+        }
+
+        .listitem, .lastitem {
+            color: #ebebeb;
+            text-decoration: none;
+
+
+        }
+
+
+          @media (min-width: 500px){
+
+            .listitem {
+          margin-right: 1rem;
+        }
+
+        .lastitem {
+          margin-right: auto;
+        }
+
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+   <h1>Simple Flex Menu</h1>
+
+
+
+
+    <div class="menuwrap">
+
+        <a href="#" class="listitem">Home</a>
+        <a href="#" class="listitem">About Us</a>
+        <a href="#" class="listitem">Products</a>
+        <a href="#" class="listitem">Policy</a>
+        <a href="#" class="lastitem">Contact Us</a>
+
+    </div>
+
+
+ <div class="flex">
+
+    This is a flex class
+
+ </div>
+
+
+     <div class="flex adjust">
+
+         <p>This is another flex class</p>
+         <p>This is another flex class</p>
+
+    </div>
+
+
+</body>
+</html>
