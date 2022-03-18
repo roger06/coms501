@@ -1,0 +1,144 @@
+body{
+    /* display: none; */
+    background-color: whitesmoke;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+header{
+    outline: 1px solid red;
+    height: 110px;
+    display: grid;
+    grid-template-columns: 100px auto;
+}
+
+header > * {
+    outline: 1px dashed blue;
+
+
+}
+header .logo img{
+
+    max-width: 100px;
+}
+
+header nav {
+    
+
+}
+
+header nav ul {
+
+    display: grid;
+    /* grid-template-columns: auto auto auto auto auto; */
+
+
+
+    grid-template-columns:     repeat(5, minmax(50px,30%))     ;
+
+
+    grid-template-rows: 100px;
+    align-items:center;  /* vertically align the list */
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0 10%;
+
+}
+
+
+main {
+    background-color: white;
+    width: 80%;
+    margin: 0 auto;
+    outline: 1px solid black;
+    padding: 10px;
+}
+
+section #text{
+
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+section #text > *{
+
+    padding: 10px;
+    outline: 1px dashed blue;
+}
+
+section #text ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+     
+}
+
+section #text ul li {
+    
+    font-weight: bold;
+    margin-bottom: 9px;
+}
+
+#products {
+    
+    /* display: none; */
+
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+
+
+}
+
+.product img {
+    max-width: 200px;
+}
+
+
+/* product page */
+
+#prod-details {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 20% 50% 30%;
+    gap: 3%;
+}
+
+
+/* buttons */
+#prod-details button {
+
+    display:block;
+    width: 140px;
+    height: 40px;
+    border-radius: 10px;
+    color: #fff;
+    
+}
+#prod-details button.add {
+
+    margin-bottom: 15px;
+    background-color: green;
+}
+
+#prod-details button.save {
+
+    background-color: gray;
+}
+
+#prod-details button.reviews {
+
+    background-color: white;
+    color: #000;
+    margin-top: 15px;
+    font-size: .8em;
+    height: 30px;
+}
+
+#prod-details .price {
+
+    font-size: 2.2em;
+    margin-bottom: .4em;
+    
+}
+
