@@ -1,0 +1,66 @@
+body {
+	background-color: #cfd3d6;
+	width: 700px;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.title {
+	text-decoration: underline;
+	font-size: 1.5em;
+	width: 250px;
+}
+
+.artist {
+	font-size: 1.2em;
+}
+
+.cost {
+	font-size: 1.2em;
+}
+
+#error-message {
+	text-align: center;
+	width: 500px;
+	height: 20px;
+	color: #F4F4F4;
+	background-color: #F74747;
+}
+
+main {
+	width: 80%;
+	margin: 0 auto;
+}
+
+section {
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 15px;
+
+}
+
+section>div {
+	outline: #F74747 1px dashed;
+}
+
+input {
+
+	background-color: black;
+	color: white;
+	height: 30px;
+	border-radius: 9px;
+}
+
+section div#selection input {
+	width: 50px;
+
+}
+
+button {
+	width: auto;
+}
+
+h4#input-list-title {
+
+	display: none;
+}
