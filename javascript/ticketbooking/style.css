@@ -18,7 +18,7 @@ body {
 	font-size: 1.2em;
 }
 
-#error-message {
+#errorMessage {
 	text-align: center;
 	width: 500px;
 	height: 20px;
@@ -40,7 +40,9 @@ section {
 }
 
 section>div {
-	outline: #F74747 1px dashed;
+	outline: #251515 1px dashed;
+	padding: 9px;
+	background-color: #F4F4F4;
 }
 
 input {
@@ -60,7 +62,7 @@ button {
 	width: auto;
 }
 
-h4#input-list-title {
+h4#inputListTitle {
 
 	display: none;
 }
