@@ -1,0 +1,88 @@
+<!-- verion 3
+
+    Flex added added to identify areas and give some layout.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two column layout - HTML5</title>
+
+    <!-- added -->
+
+    <style>
+        /* added */
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        main {
+            width: 80%;
+
+        }
+
+        header {
+            outline: 1px dashed red;
+            height: 80px;
+
+        }
+        /* added */
+        #maincontent {
+            display: flex;
+           
+        }
+        aside {
+            outline: 1px solid blue;
+            height: 80px;
+            flex: 0 0  20%;  /* added */
+
+
+            
+        }
+        
+        section {
+            outline: 2px dashed purple;
+            height: 80px;
+            flex: 0 0  80%; /* added */
+
+        }
+
+        footer {
+            outline: 1px dotted black;
+            height: 80px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Iteration Three</h1>
+        <header>
+            <p>This is the header</p>
+        </header>
+
+        <div id="maincontent"><!-- added to group aside and section as a flex container -->
+
+            <aside>
+                <p>This is the left column</p>
+            </aside>
+
+            <section>
+                <p>this is the main section</p>
+            </section>
+        </div>
+
+
+        <footer>
+            <p>this is the footer</p>
+        </footer>
+    </main>
+
+</body>
+
+</html>
