@@ -1,0 +1,16 @@
+body {
+    width: 80%;
+    margin: 0 auto;
+    font-family: 'Quicksand', sans-serif;
+    background-color: rgb(242, 240, 237);
+
+}
+
+section {
+    display: flex;
+}
+h1,
+h2 {
+    font-family: 'Rubik Vinyl', cursive;
+
+}
