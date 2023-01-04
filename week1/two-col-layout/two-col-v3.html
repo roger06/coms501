@@ -37,7 +37,7 @@
         }
         aside {
             outline: 1px solid blue;
-            height: 80px;
+            /* height: 80px; */  /* we don't want to fix a height - the content will determine that. */
             flex: 0 0  20%;  /* added */
 
 
@@ -46,8 +46,9 @@
         
         section {
             outline: 2px dashed purple;
-            height: 80px;
+            /* height: 80px; */  /* we don't want to fix a height - the content will determine that. */
             flex: 0 0  80%; /* added */
+            padding: 20px;
 
         }
 
@@ -70,16 +71,27 @@
 
             <aside>
                 <p>This is the left column</p>
+                <ul>
+                    <li>Link 1</li>
+                    <li>Link 2</li>
+                    <li>Link 3</li>
+                    <li>Link 4</li>
+                    <li>Link 5</li>
+                    <li>Link 6</li>
+                    <li>Link 7</li>
+                </ul>
             </aside>
 
             <section>
-                <p>this is the main section</p>
+                <h1>This is the main section</h1>
+                <p>It is rather bland but now has some padding</p>
+                <p>This section can now be split into various sections using Flex</p>
             </section>
         </div>
 
 
         <footer>
-            <p>this is the footer</p>
+            <p>This is the footer</p>
         </footer>
     </main>
 
