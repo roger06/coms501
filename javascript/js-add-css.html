@@ -19,7 +19,10 @@
 
         .starter-template {
             padding: 3rem 1.5rem;
+        }
 
+        .big {
+            font-size: 4em;
         }
     </style>
 
@@ -35,6 +38,12 @@
 
         }
 
+        function changeCSS(classname){
+            var classname = classname;
+
+            document.getElementById("mainheading").classList.add(classname);
+
+        }
 
     </script>
 
@@ -49,7 +58,7 @@
     <main role="main" class="container">
 
         <div class="starter-template">
-            <h1>Change inline CSS using JS functions</h1>
+            <h1 id="mainheading">Change inline CSS using JS functions</h1>
 
 
      <div id="mydiv"></div>
@@ -64,6 +73,7 @@
 <a class="btn btn-primary" href="#" role="button" onclick="changeColour('red')">Change colour of the above text to red </a> <br>
 
   <a class="btn btn-primary" href="#" role="button" onclick="changeColour('blue')">Change colour of the above text to blue </a> <br>
+  <a class="btn btn-primary" href="#" role="button" onclick="changeCSS('big')">Change CSS class</a> <br>
 
 
 

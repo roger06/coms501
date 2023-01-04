@@ -42,14 +42,19 @@
     for (let i = 0; i < inputNumber; i++) {
         
         var ticketInput = document.createElement("li");
-        
+    
         var inputField = document.createElement("input");
         
         inputField.classList.add("ticketName");
         
         ticketInput.appendChild(inputField);
-        nameInputList.appendChild(ticketInput);
+        inputList.appendChild(ticketInput);
     }
+
+
+
+
+    
     
     if (inputNumber > 0 && inputNumber !== null) {
         // show title for list - "Enter name(s)"
