@@ -11,6 +11,7 @@
             width: 80%;
             margin: 0 auto;
             font-family: 'Gill Sans MT';
+            padding-bottom: 50px;
         }
 
         hr {
@@ -27,11 +28,12 @@
         .flexcontainer {
             display: flex;
             outline: 1px dashed blue;
-
+            
             width: 800px;
             height: 200px;
         }
-
+        
+        
         .container1 {
 
             /* the two below do the h and v postioning. */
@@ -41,36 +43,87 @@
 
             justify-content: center;
             /* main axis  */
-
-
+            
+            
         }
-
+        
         .flexcontainer>* {
-
+            
             width: 100px;
             height: 100px;
             background-color: rgb(51, 21, 21);
             color: antiquewhite;
             padding: 2px;
         }
-
+        
         /* ********************************** */
-
+        
+        /* make items fill container. */
         .container2 {
-
+            
             align-items: center;
             /* cross axis  */
-
-            justify-content: space-between;
+            
             /* main axis  */
+            
+            /* so what's the difference between stretch and space between/around  */
+            
+            /* gap: 5%; */
+            /* if we want some space between them */
+        }
+        
+        .container2 > * {
+            
+            /* width: auto;  */
+            /* will be determined by content  */
+
+            /* width: 100%;  */
+            /* make them equal size - and will fill the entire width of parent -  also adjusts well if another item is added  */
+            
+            flex-grow: 1;
+            /* has the same affect as width 100% */
+            background-color: blue;
+        }
+        
+        .container3{
+            
+            justify-content: space-around;
+            
+        }
+        .container4 {
+            
+            justify-content: space-between;
+            
+        }
+        
+        .flexcontainer2 {
+            display: flex;
+            outline: 1px dashed red;
+            gap: 10px;
+        }
+        .flexcontainer2 >  * {
+            background-color: #ccc;
+        }
+        .container5 {
+            
+            align-items: stretch;
+            height: 400px;
+            
+        }
+        .container6 > * {
+
+            width: 100%;
+
 
         }
-    </style>
+        
+        
+        </style>
 </head>
 
 <body>
     <h1>Confused with align,justify etc? - not surprising!</h1>
-    <h2>simple div with another centered</h2>
+    <h2>Simple div with another centered</h2>
 
     <p>Here we are using the default orientation thus the layout is 'row' so the main axis is horizontal and the cross
         axis is the vertical one.</p>
@@ -99,16 +152,85 @@
 
     </div> <!-- end  container1-->
     <hr>
-    <h2>Multiple items - stretch</h2>
+    <h2>Multiple items - filling the whole width of parent / container</h2>
     <p>For example a nav bar that fills its parent element</p>
     <div class="flexcontainer container2">
 
         <div>The div I am in is centered!</div>
         <div>The div I am in is centered!</div>
         <div>The div I am in is centered!</div>
+        <div>The div I am in is centered!</div>
 
 
-    </div> <!-- end  container1-->
+    </div> <!-- end  container2-->
+    
+    <hr>
+    <h2>Multiple items - filling the whole width of parent / container with space around</h2>
+    <p><span> justify-content: space-around;</span></p>
+    <div class="flexcontainer container3">
+
+        <div>The div I am in is centered!</div>
+        <div>The div I am in is centered!</div>
+        <div>The div I am in is centered!</div>
+        <div>The div I am in is centered!</div>
+
+
+    </div> <!-- end  container3-->
+    <hr>
+
+    <h2>Multiple items - filling the whole width of parent / container with space between</h2>
+    <p><span> justify-content: space-between;</span></p>
+
+    <div class="flexcontainer container4">
+
+        <div>The div I am in is centered!</div>
+        <div>The div I am in is centered!</div>
+        <div>The div I am in is centered!</div>
+        <div>The div I am in is centered!</div>
+
+
+    </div> <!-- end  container4-->
+    <hr>
+
+    <h2>Multiple items - filling the whole height of parent / container with stretch</h2>
+
+    <p><span> align-items: stretch; </span> tho this appears to be the default behaviour.</p>
+    <p>Notice here - with different amounts of content we now have different widths.</p>
+    <div class="flexcontainer2 container5">
+
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing eli</div>
+        <div>Lorem, ipsum dolor.</div>
+        <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, dolores.</div>
+        <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore libero aperiam fuga magni temporibus unde, veritatis neque sed, provident a architecto voluptate fugit maiores tempore iure nobis? Quas voluptatum libero expedita et? Animi debitis ipsam accusamus sapiente facere perferendis consequatur itaque officia praesentium dolorem.</div>
+
+
+    </div> <!-- end  container5-->
+    <hr>
+
+    <h2>Multiple items - filling the whole height of parent / container with stretch - equal column widths</h2>
+
+    <p><span> align-items: stretch; </span> as above</p>
+    <p>Notice here - with different amounts of content we now have different widths.</p>
+    <div class="flexcontainer2 container5 container6">
+
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing eli</div>
+        <div>Lorem, ipsum dolor.</div>
+        <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, dolores.</div>
+        <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore libero aperiam fuga magni temporibus unde, veritatis neque sed, provident a architecto voluptate fugit maiores tempore iure nobis? Quas voluptatum libero expedita et? Animi debitis ipsam accusamus sapiente facere perferendis consequatur itaque officia praesentium dolorem.</div>
+
+
+    </div> <!-- end  container5-->
+
+
+
+
+
+
+
+<!-- with wrap -->
+
+
+
 </body>
 
 </html>
