@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Layouts</title>
+    <style>
+        body {
+            width: 80%;
+            margin: 0 auto;
+            font-family: 'Gill Sans MT';
+        }
+
+        hr {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        span {
+            font-weight: 600;
+            font-family: monospace;
+            background-color: rgb(223, 227, 227);
+        }
+
+        .flexcontainer {
+            display: flex;
+            outline: 1px dashed blue;
+
+            width: 800px;
+            height: 200px;
+        }
+
+        .container1 {
+
+            /* the two below do the h and v postioning. */
+
+            align-items: center;
+            /* cross axis  */
+
+            justify-content: center;
+            /* main axis  */
+
+
+        }
+
+        .flexcontainer>* {
+
+            width: 100px;
+            height: 100px;
+            background-color: rgb(51, 21, 21);
+            color: antiquewhite;
+            padding: 2px;
+        }
+
+        /* ********************************** */
+
+        .container2 {
+
+            align-items: center;
+            /* cross axis  */
+
+            justify-content: space-between;
+            /* main axis  */
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Confused with align,justify etc? - not surprising!</h1>
+    <h2>simple div with another centered</h2>
+
+    <p>Here we are using the default orientation thus the layout is 'row' so the main axis is horizontal and the cross
+        axis is the vertical one.</p>
+
+    <p><span> align-items: center;</span> on the container aligns the item VERTICALLY (on this orientation) - it
+        actually aligns the item on the cross axis.</p>
+    <p><span> justify-content: center;</span> on the container aligns the item HORIZONTALLY (on this orientation) - it
+        actually aligns the item on the main axis.</p>
+
+    <div class="flexcontainer container1">
+
+        <div>The div I am in is centered!</div>
+
+
+    </div> <!-- end  container1-->
+    <hr>
+
+    <h2>Multiple items</h2>
+    <p>No change needed. </p>
+    <div class="flexcontainer container1">
+
+        <div>The div I am in is centered!</div>
+        <div>The div I am in is centered!</div>
+        <div>The div I am in is centered!</div>
+
+
+    </div> <!-- end  container1-->
+    <hr>
+    <h2>Multiple items - stretch</h2>
+    <p>For example a nav bar that fills its parent element</p>
+    <div class="flexcontainer container2">
+
+        <div>The div I am in is centered!</div>
+        <div>The div I am in is centered!</div>
+        <div>The div I am in is centered!</div>
+
+
+    </div> <!-- end  container1-->
+</body>
+
+</html>
